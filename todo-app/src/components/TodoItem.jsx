@@ -1,4 +1,5 @@
 import React from "react";
+import { MdDelete } from "react-icons/md";
 function TodoItem({todoName,todoDate,onDeleteClick}) {
 
   return (
@@ -7,7 +8,7 @@ function TodoItem({todoName,todoDate,onDeleteClick}) {
       <div className="text-lg font-medium">{todoName}</div>
       <div className="text-gray-600">{todoDate}</div>
       <button onClick={()=>onDeleteClick(todoName)} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
-        Delete
+       <MdDelete />
       </button>
     </div>
     </>

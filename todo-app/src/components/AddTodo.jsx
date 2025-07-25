@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { IoAdd } from "react-icons/io5";
 function AddTodo({onNewItem}) {
   const [todoName,setTodoName]=useState('')
   const [dueDate,setDueDate]=useState('')
@@ -34,7 +34,7 @@ function AddTodo({onNewItem}) {
         onClick={handleAddButtonClicked}
         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
       >
-        Add
+        <IoAdd />
       </button>
     </div>
     </>
