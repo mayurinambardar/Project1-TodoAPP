@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 function AddTodo({onNewItem}) {
-  const [todoName,setTodoName]=useState()
-  const [dueDate,setDueDate]=useState()
+  const [todoName,setTodoName]=useState('')
+  const [dueDate,setDueDate]=useState('')
   const handleNameChange=(event)=>{
  setTodoName(event.target.value);
   }
@@ -21,13 +21,13 @@ function AddTodo({onNewItem}) {
         type="text"
         value={todoName}
         placeholder="Enter todo item"
-        onChange={(e) => setTodoName(e.target.value)}
+        onChange={handleNameChange}
         className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
       <input
         type="date"
         value={dueDate}
-        onChange={(e) => setDueDate(e.target.value)}
+        onChange={handleDateChange}
         className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
       <button

@@ -1,9 +1,9 @@
 import React from "react";
 import TodoItem from "./TodoItem";
-const TodoItems=({todoItems})=>{
+const TodoItems=({todoItems, onDeleteClick})=>{
 return (
     <>
-    {todoItems.map((item)=> <TodoItem key={item.name} todoName={item.name} todoDate={item.dueDate}/>)}
+    {todoItems.map((item)=> <TodoItem onDeleteClick={onDeleteClick} key={item.name} todoName={item.name} todoDate={item.dueDate}/>)}
     </>
 )
 }
